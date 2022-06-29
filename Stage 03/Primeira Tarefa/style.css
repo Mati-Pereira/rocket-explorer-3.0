@@ -1,0 +1,229 @@
+/* initial config */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap");
+
+/* 
+font-family: 'Poppins', sans-serif;
+font-family: 'Staatliches', cursive;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-header-text-color: #fff;
+  --primary-main-text-color: #535971;
+  --secondary-main-text-color: #4e4958;
+  --placeholder-text-color: #c1bccc;
+}
+
+body {
+  background: #e5e5e5;
+}
+
+.black-background {
+  position: absolute;
+  height: 368px;
+  width: 100%;
+  z-index: -1;
+  background-color: #535971;
+}
+
+.container {
+  max-width: 736px;
+  margin: 0 auto;
+}
+
+/* header */
+
+#header {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  width: 319px;
+}
+
+#header h1 {
+  color: var(--primary-header-text-color);
+  font-family: "Staatliches", cursive;
+  font-size: 3.6rem;
+  padding-top: 2rem 0;
+  font-weight: 400;
+}
+
+#header p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* form */
+
+.content {
+  background-color: #fafafc;
+  padding: 5rem 6.4rem;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 2.4rem auto;
+  margin-bottom: 0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2.4rem auto;
+}
+
+.names {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+}
+
+.names .input-wrapper {
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  font-family: "Staatliches", cursive;
+  font-size: 2.4px;
+  line-height: 3;
+  gap: 2.4rem;
+}
+
+fieldset legend {
+  font-family: "Staatliches", cursive;
+  width: 100%;
+  border-bottom: 1px solid #e6e6f0;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--primary-main-text-color);
+}
+
+label {
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--secondary-main-text-color);
+}
+
+label span {
+  color: var(--placeholder-text-color);
+  font-size: 1.2rem;
+}
+
+input {
+  height: 5.6rem;
+  border-radius: 8px;
+  border: 1px solid #e6e6f0;
+  padding: 0 1rem;
+  color: var(--secondary-main-text-color);
+}
+
+textarea {
+  border-radius: 8px;
+  border: 1px solid #e6e6f0;
+  padding: 1rem;
+  color: var(--secondary-main-text-color);
+}
+
+select {
+  border-radius: 8px;
+  border: 1px solid #e6e6f0;
+  padding: 1rem;
+  color: var(--secondary-main-text-color);
+  background-color: #fafafc;
+  height: 5.6rem;
+}
+
+.date-event {
+  display: flex;
+  flex-direction: row;
+}
+
+.date-event .first {
+  width: 312px;
+}
+.date-event .second {
+  width: 128px;
+}
+.date-event .third {
+  width: 128px;
+}
+
+
+.mentor legend {
+  font-size: 2rem;
+  border: none;
+  line-height: 3rem;
+}
+
+.mentor legend:first-child {
+  padding-top: 5rem;
+}
+
+.first-mentor {
+  display: flex;
+  gap: 2rem;
+}
+
+.second-mentor {
+  display: flex;
+  gap: 2rem;
+}
+/* submit button - footer */
+
+.button {
+  background-color: #535971;
+  width: 100%;
+  padding: 4rem 5rem;
+  border-radius: 0 0 10px 10px;
+  border-top: 1px solid #d6d6d6;
+}
+
+.button button {
+  width: 100%;
+  padding: 1.5rem 4rem;
+  border: none;
+  color: #ffffff;
+  background-color: #ff5374;
+  font-family: "Staatliches", cursive;
+  font-size: 1.6rem;
+  border-radius: 10px;
+}
+
+/* mobile */
+
+@media (max-width: 600px) {
+  #header {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .date-event {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .date-event .first {
+    width: 100%;
+  }
+  .date-event .second {
+    width: 100%;
+  }
+  .date-event .third {
+    width: 100%;
+  }
+}
