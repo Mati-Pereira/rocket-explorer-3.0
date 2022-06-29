@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ece9fd;
+  font-family: "Epilogue", sans-serif;
+}
+
+.container {
+  padding: 5rem 1.5rem;
+}
+
+/* content */
+
+.content{
+  margin-bottom: 4.5rem;
+}
+
+.content h5 {
+  color: #7158ef;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  color: #090039;
+  font-weight: 800;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-weight: 400;
+  color: rgba(10, 0, 57, 0.64);
+  line-height: 2rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.content a {
+  color: #090039;
+  text-decoration: none;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* list */
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.list div:first-child {
+  gap: 2.7rem;
+}
+
+.list div h1 {
+  color: #090039;
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+
+.list div h4 {
+  color: #090039;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+@media (min-width: 700px){
+  .container{
+    display: flex;
+    padding: 6.75rem;
+    gap: 10rem;
+  }
+  .content{
+    width: 50%;
+  }
+  .list{
+    margin: 3rem;
+    width: 50%;
+  }
+}
