@@ -1,0 +1,96 @@
+/* Initial config */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: white;
+  --text-color: #7d7987;
+  --span-color: #ff9900;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+/* Header */
+
+.container {
+  padding-top: 2rem;
+  text-align: center;
+  max-width: 592px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  object-fit: contain;
+}
+
+/* Main Content */
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 49px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding-bottom: 3rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.span-h1 {
+  color: var(--span-color);
+  font-weight: bold;
+}
+
+.color-yellow {
+  color: var(--span-color);
+}
+
+/* Footer */
+
+footer {
+  padding-top: 7rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+hr {
+  padding-bottom: 10px;
+  border: none;
+  border-top: 1px solid #eceff2;
+}
+
+footer a {
+  padding: 1rem;
+}
+
+footer a:hover {
+  color: #ffa434;
+  transition: 0.25s;
+}
+
+.footer-img{
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+}
+
+/* Responsive */
+
+@media (max-width: 380px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
