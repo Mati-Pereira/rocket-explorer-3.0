@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #28293e;
+  font-family: "Epilogue", sans-serif;
+}
+
+.container {
+  padding: 3rem 1rem;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+header h5 {
+  color: #bbb3e5;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+header h2 {
+  font-weight: 800;
+  color: #fff;
+  line-height: 6.4rem;
+  font-size: 5.6rem;
+}
+
+.imgs {
+  display: grid;
+  gap: 2rem;
+}
+
+.imgs img {
+  height: 300px;
+  width: 100%;
+
+}
+
+.card1 .text,
+.card2 .text,
+.card3 .text,
+.card4 .text {
+  position: relative;
+  top: 14rem;
+  left: 4rem;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.imgs span {
+  display: inline-block;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 50px;
+  color: #090039;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+
+.imgs h3 {
+  color: #fff;
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+@media (min-width: 700px) {
+  .container {
+    padding: 9.2rem 13.5rem;
+  }
+
+  .imgs {
+    grid-template-areas:
+      "A A A B"
+      "C D D D";
+  }
+
+  .card1 {
+    grid-area: A;
+  }
+
+  .card2 {
+    grid-area: B;
+  }
+
+  .card3 {
+    grid-area: C;
+  }
+  .card4 {
+    grid-area: D;
+  }
+}
