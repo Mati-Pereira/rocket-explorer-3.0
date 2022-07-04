@@ -1,5 +1,5 @@
 # rocket
 
-repository for the program exploerer of rocketseat
+### repository for the program explorer of *rocketseat*
 
 😊
