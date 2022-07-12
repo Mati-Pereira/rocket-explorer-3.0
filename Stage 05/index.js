@@ -1,30 +1,90 @@
-let minutes = document.querySelector(".minutes")
-let seconds = document.querySelector(".seconds")
+// * Minutes and Seconds
 
-let playButton = document.querySelector(".play-button")
-let pauseButton = document.querySelector(".pause-button")
+let minutesDisplay = document.querySelector(".minutesDisplay")
+let secondsDisplay = document.querySelector(".secondsDisplay")
 
-let playTimer = document.querySelector(".play-timer")
-let pauseTimer = document.querySelector(".pause-timer")
+// * Play
 
-let playSound = document.querySelector(".play-sound")
-let pauseSound = document.querySelector(".pause-sound")
+const playButton = document.querySelector(".play-button")
+const pauseButton = document.querySelector(".pause-button")
 
-let play = document.querySelector(".play")
-let timer = document.querySelector(".timer")
-let sound = document.querySelector(".sound")
+// * Timer
 
-play.addEventListener('click', () => {
-  playButton.classList.toggle('hidden')
-  pauseButton.classList.toggle('hidden')
+const playTimer = document.querySelector(".play-timer")
+const pauseTimer = document.querySelector(".pause-timer")
+
+// * Sound
+
+const playSound = document.querySelector(".play-sound")
+const pauseSound = document.querySelector(".pause-sound")
+
+// * Buttons
+
+const play = document.querySelector("#play")
+const timer = document.querySelector("#timer")
+const sound = document.querySelector("#sound")
+
+let minutes
+let counter
+
+// * Events
+
+playButton.addEventListener('click', () => {
+  
+  playButton.classList.add('hidden')
+  pauseButton.classList.remove('hidden')
+  playTimer.classList.add('hidden')
+  pauseTimer.classList.remove('hidden')
+
+  counter = setInterval(() => {
+    if (secondsDisplay.textContent == 0) {
+      minutesDisplay.textContent = Number(minutesDisplay.textContent) - 1
+      secondsDisplay.textContent += Number(secondsDisplay.textContent) + 60
+    }
+    secondsDisplay.textContent = String(Number(secondsDisplay.textContent) - 1).padStart(2, '0')
+  }, 1000);
 })
 
-timer.addEventListener('click', () => {
-  playTimer.classList.toggle('hidden')
-  pauseTimer.classList.toggle('hidden')
+
+pauseButton.addEventListener('click', () => {
+  pauseButton.classList.add('hidden')
+  playButton.classList.remove('hidden')
+  clearInterval(counter)
 })
 
-sound.addEventListener('click', () => {
-  playSound.classList.toggle('hidden')
-  pauseSound.classList.toggle('hidden')
+
+playTimer.addEventListener('click', () => {
+  minutes = Number(prompt('Digite o Número'))
+  minutesDisplay.textContent = minutes
 })
+
+
+pauseTimer.addEventListener('click', () => {
+  pauseTimer.classList.add('hidden')
+  playTimer.classList.remove('hidden')
+  playButton.classList.remove('hidden')
+  pauseButton.classList.add('hidden')
+
+  clearInterval(counter)
+
+  secondsDisplay.textContent = '00'
+  minutesDisplay.textContent = minutes || 25
+})
+
+
+playSound.addEventListener('click', () => {
+  playSound.classList.add('hidden')
+  pauseSound.classList.remove('hidden')
+})
+
+
+pauseSound.addEventListener('click', () => {
+  pauseSound.classList.add('hidden')
+  playSound.classList.remove('hidden')
+})
+
+
+
+
+// * callback - chamar uma função a partir de um evento, não acontece na hora
+// * refatorar não é prazeroso, mas bastante necessário

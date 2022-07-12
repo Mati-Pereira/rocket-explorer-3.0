@@ -43,12 +43,18 @@ body button{
   gap: 1.25rem;
 }
 
-.sound{
+#sound{
   position: absolute;
   top: auto;
   left: auto;
   bottom: 2rem;
   right: 2rem;
+}
+
+#play,
+#timer,
+#sound {
+  cursor: pointer;
 }
 
 .hidden{
