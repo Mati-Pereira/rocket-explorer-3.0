@@ -10,8 +10,8 @@ const pauseButton = document.querySelector(".pause-button")
 
 // * Timer
 
-const playTimer = document.querySelector(".play-timer")
-const pauseTimer = document.querySelector(".pause-timer")
+const setTimer = document.querySelector(".play-timer")
+const resetTimer = document.querySelector(".pause-timer")
 
 // * Sound
 
@@ -28,9 +28,9 @@ const showTimer = document.querySelector("#showTimer")
 let minutes
 let counter
 let hours
-let pointHours
-let validate = false
-let minutesHours
+let pointHours // dois pontos para horas - two points for hours
+let validateHoursExist = false
+let minutesHours // minutos se os valor setado der pelo menos mais de uma hora - minutes if the set value is at least more than one hour
 
 // * Events
 
@@ -38,36 +38,43 @@ playButton.addEventListener('click', () => {
 
   playButton.classList.add('hidden')
   pauseButton.classList.remove('hidden')
-  playTimer.classList.add('hidden')
-  pauseTimer.classList.remove('hidden')
+  setTimer.classList.add('hidden')
+  resetTimer.classList.remove('hidden')
 
   counter = setInterval(() => {
     if (minutesDisplay.textContent == '00' && secondsDisplay.textContent == '00') {
       hours.textContent = Number(hours.textContent) - 1
       minutesDisplay.textContent = Number(minutesDisplay.textContent) + 60
     }
+
     if (secondsDisplay.textContent == '00') {
-      minutesDisplay.textContent = String(Number(minutesDisplay.textContent) - 1).padStart(2, '0')
+
+      if (!hours) {
+        minutesDisplay.textContent = Number(minutesDisplay.textContent) - 1
+      } else {
+        minutesDisplay.textContent = String(Number(minutesDisplay.textContent) - 1).padStart(2, '0')
+      }
+
       secondsDisplay.textContent += Number(secondsDisplay.textContent) + 60
     }
 
     secondsDisplay.textContent = String(Number(secondsDisplay.textContent) - 1).padStart(2, '0')
-
-    if (minutesDisplay.textContent === '0' && secondsDisplay.textContent === '00' && hours.textContent === 0) {
+    // 
+    if ((secondsDisplay.textContent === '00' && minutesDisplay.textContent === '0') ||
+      (minutesDisplay.textContent === '00' && secondsDisplay.textContent === '00' && hours.textContent === '0')) {
       clearInterval(counter)
       resetIcons()
       resetValues()
     }
 
-    console.log(typeof minutesDisplay.textContent, typeof secondsDisplay.textContent);
-
-  }, 1000);
+    console.log(minutesDisplay.textContent.valueOf(), typeof minutesDisplay.textContent, secondsDisplay.textContent.valueOf(), typeof secondsDisplay.textContent, hours.textContent.valueOf(), typeof hours.textContent);
+  }, 50);
 
 })
 
 function resetIcons() {
-  playTimer.classList.remove('hidden')
-  pauseTimer.classList.add('hidden')
+  setTimer.classList.remove('hidden')
+  resetTimer.classList.add('hidden')
   playButton.classList.remove('hidden')
   pauseButton.classList.add('hidden')
 }
@@ -77,7 +84,7 @@ function resetValues() {
   minutesDisplay.textContent = '25'
   pointHours.remove()
   hours.remove()
-  validate = false
+  validateHoursExist = false
 
 
   // createHours()
@@ -85,8 +92,8 @@ function resetValues() {
 
 function createHours() {
   if (minutes >= 60) {
-    if (validate === false) {
-      validate = true
+    if (validateHoursExist === false) {
+      validateHoursExist = true
       hours = document.createElement('span')
       pointHours = document.createElement('span')
       pointHours.textContent = ":"
@@ -110,18 +117,18 @@ pauseButton.addEventListener('click', () => {
   pauseClock()
 })
 
-playTimer.addEventListener('click', () => {
+setTimer.addEventListener('click', () => {
   minutes = Number(prompt('Digite Quantos Minutos Para o Contador'))
   createHours()
   if (minutes < 60) {
     minutesDisplay.textContent = minutes
     pointHours.remove()
     hours.remove()
-    validate = false
+    validateHoursExist = false
   }
 })
 
-pauseTimer.addEventListener('click', () => {
+resetTimer.addEventListener('click', () => {
   pauseClock()
   resetIcons()
   resetValues()
