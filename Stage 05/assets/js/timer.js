@@ -20,7 +20,7 @@ function reduceSeconds() {
   secondsDisplay.textContent = String(Number(secondsDisplay.textContent) - 1).padStart(2, '0')
 }
 
-// ! When hours are needed
+// ! Only works when hours are needed
 
 function createHours() {
   if (minutes >= 60) {
@@ -46,5 +46,4 @@ function minutesWithoutHours() {
     validateHoursExist = false
   }
 }
-
 

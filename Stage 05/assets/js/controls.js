@@ -25,7 +25,6 @@ function pauseIcons() {
   pauseButton.classList.add('hidden')
   setTimer.classList.remove('hidden')
   resetTimer.classList.add('hidden')
-
 }
 
 function resetClock() {
@@ -36,4 +35,3 @@ function resetClock() {
     resetValues()
   }
 }
-
