@@ -1,5 +1,3 @@
-import Controls from './controls'
-import Timer from './timer'
 
 // * Minutes and Seconds
 let minutesDisplay = document.querySelector(".minutesDisplay")
@@ -27,53 +25,33 @@ const showTimer = document.querySelector("#showTimer")
 let minutes
 let counter
 let hoursDisplay
-let pointHoursDisplay // dois pontos para horas - two points for hoursDisplay
-let validateHoursDisplayExist = false
-let minutesHoursDisplay // minutos se os valor setado der pelo menos mais de uma hora - minutes if the set value is at least more than one hour
-
-// * instantiating my fabrics
-
-const timerIns = Timer({
-  reduceHoursDisplay,
-  reduceMinutes,
-  reduceSeconds,
-  pauseClock,
-  createHoursDisplay,
-  minutesWithoutHoursDisplay,
-  resetClock
-})
-
-const controlsIns = Controls({
-  resetIcons,
-  resetValues,
-  changeIcons
-})
+let pointHours // dois pontos para horas - two points for hoursDisplay
+let validateHoursExist = false
+let minutesHours // minutos se os valor setado der pelo menos mais de uma hora - minutes if the set value is at least more than one hour
 
 // * Events
 
 setTimer.addEventListener('click', () => {
   minutes = Number(prompt('Digite Quantos Minutos Para o Contador')) || '25'
-  timerIns.createHoursDisplay()
-  timerIns.minutesWithoutHoursDisplay()
+  createHours()
+  minutesWithoutHours()
 })
 
 resetTimer.addEventListener('click', () => {
-  timerIns.pauseClock()
-  controlsIns.resetIcons()
-  controlsIns.resetValues()
+  pauseClock()
+  resetIcons()
+  resetValues()
 })
 
 playButton.addEventListener('click', () => {
-  controlsIns.changeIcons()
+  playIcons()
   counter = setInterval(() => {
-    timerIns.reduceHoursDisplay()
-    timerIns.reduceMinutes()
-    timerIns.reduceSeconds()
-    timerIns.resetClock()
+    reduceHours()
+    reduceMinutes()
+    reduceSeconds()
+    resetClock()
   }, 1000);
 })
-
-
 
 
 // * callback - chamar uma função a partir de um evento, não acontece na hora
