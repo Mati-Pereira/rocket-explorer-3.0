@@ -38,7 +38,7 @@ setTimer.addEventListener('click', () => {
 })
 
 resetTimer.addEventListener('click', () => {
-  pauseClock()
+  clearInterval(counter)
   resetIcons()
   resetValues()
 })
@@ -49,10 +49,14 @@ playButton.addEventListener('click', () => {
     reduceHours()
     reduceMinutes()
     reduceSeconds()
-    resetClock()
+    resetClock() // when it reaches zero
   }, 1000);
 })
 
+pauseButton.addEventListener('click', () => {
+  pauseIcons()
+  clearInterval(counter)
+})
 
 // * callback - chamar uma função a partir de um evento, não acontece na hora
 // * refatorar não é prazeroso, mas bastante necessário

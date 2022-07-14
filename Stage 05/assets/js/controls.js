@@ -20,6 +20,14 @@ function playIcons() {
   resetTimer.classList.remove('hidden')
 }
 
+function pauseIcons() {
+  playButton.classList.remove('hidden')
+  pauseButton.classList.add('hidden')
+  setTimer.classList.remove('hidden')
+  resetTimer.classList.add('hidden')
+
+}
+
 function resetClock() {
   if ((secondsDisplay.textContent === '00' && minutesDisplay.textContent === '0') ||
     (minutesDisplay.textContent === '00' && secondsDisplay.textContent === '00' && hoursDisplay.textContent === '0')) {
@@ -29,6 +37,3 @@ function resetClock() {
   }
 }
 
-function pauseClock() {
-  clearInterval(counter)
-}
