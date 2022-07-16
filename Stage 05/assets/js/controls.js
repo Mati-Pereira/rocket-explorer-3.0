@@ -30,6 +30,7 @@ function pauseIcons() {
 function resetClock() {
   if ((secondsDisplay.textContent === '00' && minutesDisplay.textContent === '0') ||
     (minutesDisplay.textContent === '00' && secondsDisplay.textContent === '00' && hoursDisplay.textContent === '0')) {
+    kitchenTimer.play()
     clearInterval(counter)
     resetIcons()
     resetValues()
