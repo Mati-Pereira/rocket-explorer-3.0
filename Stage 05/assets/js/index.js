@@ -29,19 +29,23 @@ let minutesHours // minutes if the set value is at least more or equal to one ho
 // * Events
 
 setTimer.addEventListener('click', () => {
+  buttonPressAudio.play()
   minutes = Number(prompt('Digite Quantos Minutos Para o Contador')) || '25'
   createHours()
   minutesWithoutHours()
 })
 
 resetTimer.addEventListener('click', () => {
+  buttonPressAudio.play()
   clearInterval(counter)
   resetIcons()
   resetValues()
 })
 
 playButton.addEventListener('click', () => {
+  buttonPressAudio.play()
   playIcons()
+
   counter = setInterval(() => {
     reduceHours()
     reduceMinutes()
@@ -51,6 +55,19 @@ playButton.addEventListener('click', () => {
 })
 
 pauseButton.addEventListener('click', () => {
+  buttonPressAudio.play()
   pauseIcons()
   clearInterval(counter)
+})
+
+playSound.addEventListener('click', () => {
+  bgAudio.play()
+  playSound.classList.add('hidden')
+  pauseSound.classList.remove('hidden')
+})
+
+pauseSound.addEventListener('click', () => {
+  bgAudio.pause()
+  playSound.classList.remove('hidden')
+  pauseSound.classList.add('hidden')
 })
