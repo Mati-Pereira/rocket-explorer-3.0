@@ -51,7 +51,27 @@ body{
 .controls{
   display: flex;
   gap: 2.4rem;
+  cursor: pointer;
+  transition: .25s;
 }
+
+.controls .playButton,
+.controls .stopButton,
+.controls .plusButton,
+.controls .minusButton{
+  transition: .25s;
+}
+
+.controls .playButton:active,
+.controls .stopButton:active,
+.controls .plusButton:active,
+.controls .minusButton:active{
+  transform: scale(.85);
+  transition: .25s;
+}
+
+
+/* esquerda */
 
 .sounds{
   display: grid;
@@ -120,3 +140,10 @@ body{
     opacity: 1;
   }
 }
+
+
+@media (max-width: 700px){
+  .container{
+  display: flex;
+  flex-direction: column;
+}}
