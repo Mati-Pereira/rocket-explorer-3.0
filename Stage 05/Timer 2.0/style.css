@@ -30,7 +30,7 @@ body{
   align-items: center;
   width: 100%;
   height: 100vh;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .timer{
@@ -56,15 +56,67 @@ body{
 .sounds{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
 }
 .sounds img{
   background-color: var(--bg-sounds);
   padding: 3rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 1rem;
-  color: var(--text-color);
+  cursor: pointer;
+  transition: .25s;
+
 }
 
-.sounds .florestaSound{
-  co
+.sounds .florestaSound:hover,
+.sounds .chuvaSound:hover,
+.sounds .cafeteriaSound:hover,
+.sounds .lareiraSound:hover
+
+{
+  animation: tempo 1s;
+}
+.sounds .florestaHover:hover,
+.sounds .chuvaHover:hover,
+.sounds .cafeteriaHover:hover,
+.sounds .lareiraHover:hover
+
+{
+  animation: tempoInvertido 1s;
+  background-color: var(--bg-sounds-hover);
+}
+
+.sounds .florestaHover:active,
+.sounds .chuvaHover:active,
+.sounds .cafeteriaHover:active,
+.sounds .lareiraHover:active
+
+{
+  font-size: 1rem;
+  transform: scale(.9);
+  transition: .25s;
+}
+/* criados e usados */
+
+.hidden{
+  display: none;
+}
+
+@keyframes tempo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes tempoInvertido {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
