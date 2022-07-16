@@ -2,14 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timer 2.0</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Timer 2.0</title>
 </head>
 
 <body>
-
+  <div class="container">
+    <div class="timer">
+      <div class="clock">
+        <span class="minutesDisplay">25</span>
+        <span>:</span>
+        <span class="secondsDisplay">00</span>
+      </div>
+      <div class="controls">
+        <img src="./svg/controls/play.svg" alt="playButton" class="playButton">
+        <img src="./svg/controls/stop.svg" alt="stopButton" class="stopButton">
+        <img src="./svg/controls/plus.svg" alt="plusButton" class="plusButton">
+        <img src="./svg/controls/minus.svg" alt="minusButton" class="minusButton">
+      </div>
+    </div>
+    <div class="sounds">
+      <img src="./svg/sounds/floresta.svg" alt="florestaSound" class="florestaSound">
+      <img src="./svg/sounds/chuva.svg" alt="chuvaSound" class="chuvaSound">
+      <img src="./svg/sounds/cafeteria.svg" alt="cafeteriaSound" class="cafeteriaSound">
+      <img src="./svg/sounds/lareira.svg" alt="lareiraSound" class="lareiraSound">
+    </div>
+  </div>
+  <script type="module" src="js/index.js"></script>
 </body>
 
 </html>
