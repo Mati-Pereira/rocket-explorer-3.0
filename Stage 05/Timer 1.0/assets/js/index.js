@@ -1,3 +1,4 @@
+
 // * Minutes and Seconds
 let minutesDisplay = document.querySelector(".minutesDisplay")
 let secondsDisplay = document.querySelector(".secondsDisplay")
@@ -61,13 +62,13 @@ pauseButton.addEventListener('click', () => {
 })
 
 playSound.addEventListener('click', () => {
-  bgAudio.play()
+  bgAudio.pause()
   playSound.classList.add('hidden')
   pauseSound.classList.remove('hidden')
 })
 
 pauseSound.addEventListener('click', () => {
-  bgAudio.pause()
+  bgAudio.play()
   playSound.classList.remove('hidden')
   pauseSound.classList.add('hidden')
 })
