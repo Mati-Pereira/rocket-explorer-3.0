@@ -78,7 +78,6 @@ lareira.addEventListener('click', () => {
 
 playButton.addEventListener("click", () => {
   counter = setInterval(() => {
-    console.log(typeof minutes.textContent, minutes.textContent, typeof seconds.textContent, seconds.textContent)
     if (seconds.textContent === '00') {
       seconds.textContent += Number(seconds.textContent) + 60
       minutes.textContent = Number(minutes.textContent) - 1
@@ -94,6 +93,7 @@ playButton.addEventListener("click", () => {
 
 
 stopButton.addEventListener("click", () => {
+  resetAudio()
   clearInterval(counter)
 })
 
