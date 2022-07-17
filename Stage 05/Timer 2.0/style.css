@@ -118,6 +118,9 @@ body{
   transform: scale(.9);
   transition: .25s;
 }
+
+
+
 /* criados e usados */
 
 .hidden{
@@ -148,3 +151,47 @@ body{
   display: flex;
   flex-direction: column;
 }}
+
+
+/* dark mode */
+
+#dark-mode-input {
+  display: none;
+}
+
+#dark-mode-input:checked ~ .container {
+  background: #444;
+  color: #fff; 
+}
+
+.dark-mode-toggler {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border: 2px solid #bbb;
+  border-radius: 20px;
+  top: 10px;
+  right: 10px;
+  transition: all 300ms ease-in-out;
+}
+
+.dark-mode-toggler div {
+  width: 12px;
+  height: 12px;
+  background: deeppink;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 300ms ease-in-out;
+}
+
+#dark-mode-input:checked ~ .dark-mode-toggler {
+  background: deeppink;
+}
+
+#dark-mode-input:checked ~ .dark-mode-toggler div {
+  background: #ccc;
+  left: 21px;
+}
