@@ -45,14 +45,12 @@ lareira.addEventListener('mouseout', () => {
   lareiraHover.classList.add("hidden")
 })
 
-
 function resetAudio() {
   florestaAudio.pause()
   chuvaAudio.pause()
   cafeteriaAudio.pause()
   lareiraAudio.pause()
 }
-
 
 floresta.addEventListener('click', () => {
   resetAudio()
