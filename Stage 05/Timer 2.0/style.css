@@ -176,7 +176,7 @@ body{
   position: absolute;
   width: 40px;
   height: 20px;
-  background: #ccc;
+  background: var(--text-sounds-hover);
   border: 2px solid #bbb;
   border-radius: 20px;
   top: 10px;
@@ -187,7 +187,7 @@ body{
 .dark-mode-toggler div {
   width: 12px;
   height: 12px;
-  background: deeppink;
+  background: var(--bg-sounds-hover);
   border-radius: 50%;
   position: absolute;
   top: 2px;
@@ -196,10 +196,10 @@ body{
 }
 
 #dark-mode-input:checked ~ .dark-mode-toggler {
-  background: deeppink;
+  background: var(--bg-sounds-hover);
 }
 
 #dark-mode-input:checked ~ .dark-mode-toggler div {
-  background: #ccc;
+  background: var(--text-sounds-hover);
   left: 21px;
 }
