@@ -60,6 +60,7 @@ body{
 .controls .plusButton,
 .controls .minusButton{
   transition: .25s;
+  background-color: transparent;
 }
 
 .controls .playButton:active,
