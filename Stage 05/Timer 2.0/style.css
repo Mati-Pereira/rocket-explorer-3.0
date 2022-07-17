@@ -99,11 +99,30 @@ body{
 {
   animation: tempo 1s;
 }
-.sounds .florestaHover:hover,
-.sounds .chuvaHover:hover,
-.sounds .cafeteriaHover:hover,
-.sounds .lareiraHover:hover
 
+
+.sounds .florestaHover:hover, .sounds .florestaHover:active
+{
+  animation: tempoInvertido 1s;
+  background-color: var(--bg-sounds-hover);
+  font-size: 1rem;
+  transform: scale(.9);
+}
+.sounds .chuvaHover:hover, .sounds .chuvaHover:active
+{
+  animation: tempoInvertido 1s;
+  background-color: var(--bg-sounds-hover);
+  font-size: 1rem;
+  transform: scale(.9);
+}
+.sounds .cafeteriaHover:hover, .sounds .cafeteriaHover:active
+{
+  animation: tempoInvertido 1s;
+  background-color: var(--bg-sounds-hover);
+  font-size: 1rem;
+  transform: scale(.9);
+}
+.sounds .lareiraHover:hover, .sounds .lareiraHover:active
 {
   animation: tempoInvertido 1s;
   background-color: var(--bg-sounds-hover);
@@ -119,7 +138,6 @@ body{
 {
   font-size: 1rem;
   transform: scale(.9);
-  transition: .25s;
 }
 }
 
