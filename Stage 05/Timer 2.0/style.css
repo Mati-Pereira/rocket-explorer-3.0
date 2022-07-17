@@ -31,6 +31,7 @@ body{
   width: 100%;
   height: 100vh;
   gap: 5rem;
+  transition: 500ms;
 }
 
 .timer{
@@ -162,6 +163,7 @@ body{
 #dark-mode-input:checked ~ .container {
   background: #444;
   color: #fff; 
+  transition: 500ms;
 }
 
 #dark-mode-input:checked ~ .container .playButton, 
