@@ -109,16 +109,20 @@ body{
   background-color: var(--bg-sounds-hover);
 }
 
-.sounds .florestaHover:active,
-.sounds .chuvaHover:active,
-.sounds .cafeteriaHover:active,
-.sounds .lareiraHover:active
+
+@media(hover: hover) and (pointer: fine) {
+.sounds .florestaHover:hover,
+.sounds .chuvaHover:hover,
+.sounds .cafeteriaHover:hover,
+.sounds .lareiraHover:hover
 
 {
   font-size: 1rem;
   transform: scale(.9);
   transition: .25s;
 }
+}
+
 
 
 
