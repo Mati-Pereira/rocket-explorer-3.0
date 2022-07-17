@@ -1,49 +1,49 @@
-floresta.addEventListener('mouseover', () => {
-  florestaSound.classList.add("hidden")
-  florestaHover.classList.remove("hidden")
-})
+// floresta.addEventListener('mouseover', () => {
+//   florestaSound.classList.add("hidden")
+//   florestaHover.classList.remove("hidden")
+// })
 
 
-floresta.addEventListener('mouseout', () => {
-  florestaSound.classList.remove("hidden")
-  florestaHover.classList.add("hidden")
-})
+// floresta.addEventListener('mouseout', () => {
+//   florestaSound.classList.remove("hidden")
+//   florestaHover.classList.add("hidden")
+// })
 
 
-chuva.addEventListener('mouseover', () => {
-  chuvaSound.classList.add("hidden")
-  chuvaHover.classList.remove("hidden")
-})
+// chuva.addEventListener('mouseover', () => {
+//   chuvaSound.classList.add("hidden")
+//   chuvaHover.classList.remove("hidden")
+// })
 
 
-chuva.addEventListener('mouseout', () => {
-  chuvaSound.classList.remove("hidden")
-  chuvaHover.classList.add("hidden")
-})
+// chuva.addEventListener('mouseout', () => {
+//   chuvaSound.classList.remove("hidden")
+//   chuvaHover.classList.add("hidden")
+// })
 
 
-cafeteria.addEventListener('mouseover', () => {
-  cafeteriaSound.classList.add("hidden")
-  cafeteriaHover.classList.remove("hidden")
-})
+// cafeteria.addEventListener('mouseover', () => {
+//   cafeteriaSound.classList.add("hidden")
+//   cafeteriaHover.classList.remove("hidden")
+// })
 
 
-cafeteria.addEventListener('mouseout', () => {
-  cafeteriaSound.classList.remove("hidden")
-  cafeteriaHover.classList.add("hidden")
-})
+// cafeteria.addEventListener('mouseout', () => {
+//   cafeteriaSound.classList.remove("hidden")
+//   cafeteriaHover.classList.add("hidden")
+// })
 
 
-lareira.addEventListener('mouseover', () => {
-  lareiraSound.classList.add("hidden")
-  lareiraHover.classList.remove("hidden")
-})
+// lareira.addEventListener('mouseover', () => {
+//   lareiraSound.classList.add("hidden")
+//   lareiraHover.classList.remove("hidden")
+// })
 
 
-lareira.addEventListener('mouseout', () => {
-  lareiraSound.classList.remove("hidden")
-  lareiraHover.classList.add("hidden")
-})
+// lareira.addEventListener('mouseout', () => {
+//   lareiraSound.classList.remove("hidden")
+//   lareiraHover.classList.add("hidden")
+// })
 
 function resetAudio() {
   florestaAudio.pause()
